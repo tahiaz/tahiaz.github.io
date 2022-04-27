@@ -1,0 +1,91 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 100px;
+}
+
+.introducao h1 {
+  font-size: 4.25rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  height: 160px;
+  width: 100px;
+  background: url("../img/detalhe-dragao.svg") no-repeat center;
+  position: absolute;
+  top: -45px;
+  left: -10px;
+  z-index: -1;
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+.dragao {
+  width: 240px;
+}
+
+.font {
+  font-family: "Roboto Slab", serif;
+}
+
+@media (max-width: 1000px) {
+  introducao-dev {
+    font-size: 3rem;
+  }
+
+  introducao-dev::before {
+    top: -65px;
+    width: 80px;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+@media (max-width: 800) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .introducao-dev {
+    font-size: 2rem;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+@media (max-width: 400) {
+  .introducao img {
+    display: none;
+    grid-template-columns: 1fr;
+  }
+
+  .introducao-dev {
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  img {
+    display: none;
+  }
+
+  .nome {
+    font-size: 1rem;
+  }
+}
